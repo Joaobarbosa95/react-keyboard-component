@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+/* Single key */
+.key {
+    background:red;
+    float: left;
+    border: 1px sodivd #f9f9f9;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  font-size: 25px;
+  border-radius: 100%;
+ }
+
+/*Blink if clicked */
+.key:active{
+    background-color: #FFD488;
+    border-color: #FFAE6E;
+    animation: 1s bdivnk ease-in-out;
+}
+
+#keys-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+#numberic-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Row positioning alphabetic*/
+#keys-layout .keyboard-row:nth-child(2) {
+    margin-left: 40px;
+}
+
+#keys-layout .keyboard-row:nth-child(3) {
+    margin-left: 1%;
+}
+
+/* Special Keys */
+/* Alphabetic */
+#keys-layout .keyboard-row #space {
+    width: 48%;
+    border-radius: 100px;
+}
+
+#keys-layout .keyboard-row #shift {
+    width: 100px;
+    border-radius: 100px;
+}
+
+#keys-layout .keyboard-row #backspace {
+    width: 110px;
+    border-radius: 100px;
+}
+
+#keys-layout .keyboard-row #numeric {
+    width: 110px;
+    border-radius: 100px;
+}
+
+#keys-layout .keyboard-row #\.com{
+    width: 110px;
+    border-radius: 100px;
+}
+
+/* Numeric */
+#numeric-layout .keyboard-row #abc {
+    width: 110px;
+    border-radius: 100px;
+}
+
+#numeric-layout .keyboard-row #backspace {
+    width: 100px;
+    border-radius: 100px;
+}
+
+#numeric-layout .keyboard-row #space {
+    width: 62.5%;
+    border-radius: 100px;
+}
+
+/* 
+ * special letters
+*/
+div#accent-keyboard div.accent-keyboard-modifications {
+    position: absolute;
+    background: rgba(133,133,133,0.6);
+    border-radius: 5px;
+    /*display: none;*/
+    padding: 8px
+}
+
+/*Keyboard position */
+div#accent-keyboard {
+  top: 1200px;
+  position: relative;
+}
+
+div#accent-keyboard div .accent-keyboard-backspace {
+  width: 110px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  border-radius: 100px;
+}
+
+div#accent-keyboard div #accent-keyboard-space {
+  margin-left: 5px;
+  width: 400px;
+  clear: none;
+}
+
+div#accent-keyboard div #accent-keyboard-left-shift {
+  margin-left: 2%;
+}
+#accent-keyboard {
+  max-width: 848px;
+}
+div#accent-keyboard div.accent-keyboard-modifications {
+  height: 82px;
+  top: -110px !important;
+  width: max-content !important;
+  padding: 5px;
+  left: -5px !important;
+  background: rgba(0, 0, 0, 0.5);
+}
+.display-none {
+/*  display: none !important;*/
+}
+
+/*special characters start*/
+div#accent-keyboard div div:nth-child(n + 34) {
+  display: none; /*Number*/
+}
+div#accent-keyboard div div:nth-child(58),
+div#accent-keyboard div div:nth-child(60) {
+  width: 110px;
+}
+div#accent-keyboard div div:nth-child(59) {
+  width: 400px;
+}
+
+/*special characters end*/
+/*disable active buttons effect*/
+div#accent-keyboard div div.active {
+}
+
+.numbers {
+  max-width: 672px !important;
+}
+
+#keyboard-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #fff;
+    border-color: #fff;
+    color: #000;
+  }
+  100% {
+    background-color: #000;
+    border-color: #fff;
+    color: #fff;
+  }
+}
